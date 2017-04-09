@@ -1,0 +1,124 @@
+.mainMenu ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    display: flex;
+}
+
+nav {
+    float: left;
+}
+
+.header h1 {
+    float: right;
+    display: inline;
+    color: #f2ef57;
+    font-size: 50px;
+    margin: 0px;
+    margin-right: 20px;
+}
+
+h2 {
+    color: #f2ef57;
+    font-size: 30px;
+    margin: 20px;
+    margin-right: 20px;
+}
+
+.header {
+    background-color: #1a1087;
+    margin-bottom: 0px;
+    padding: 0px;
+}
+
+.mainMenu li {
+    float: left;
+}
+
+.mainMenu li a {
+    display: block;
+    color: #ffff00;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.mainMenu li a:hover {
+    background-color: #135596;
+}
+
+.logo {
+    position: absolute;
+}
+
+.menuContainer {}
+
+.banner {
+    width: 100%;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #4286f4;
+}
+
+table {
+    border-collapse: collapse;
+    width: 95%;
+    padding-left: 25px;
+    padding-left: 25px;
+    margin-left: 25px;
+}
+
+p,
+h2 {
+    margin-left: 25px;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2
+}
+
+tr:nth-child(odd) {
+    background-color: #f2ef57
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+main {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+nput[type=text] {
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+}

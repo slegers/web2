@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/stylsheet.css"> </head>
+
+<body>
+    <header class="header">
+        <nav class="mainMenu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="overview.html">Overzicht</a></li>
+                <li><a href="#top" class="active">Add study</a></li>
+            </ul>
+        </nav>
+        <h1 id="top" class="headerTitle">Study tracker</h1> <img class="banner" src="img/banner.jpg" alt="banner"> </header>
+    <main>
+        <h2> Add vak</h2>
+        <form method="post" id="vakForm" enctype="text/plain">
+            <fieldset>
+                <legend> Vak</legend>
+                <label for="vak"> naam?</label>
+                <br>
+                <input id="naam" type="text" required name="Naam">
+                <br>
+                <label for="studiepunten">aantal studiepunten.
+                    <br>
+                    <input id="studiepunten" type="text" required name="studiepunten"> </label>
+                <label for="submit">
+                    <br>
+                    <input id="submit" type="submit" value="indienen"> </label>
+                <!-- </fieldset> -->
+            </fieldset>
+        </form>
+        <form method="post" id="StudyForm" enctype="text/plain" action="add/Vak">
+            <fieldset>
+                <legend> Studie gegevens</legend>
+                <label for="vak"> Vak?</label>
+                <br>
+                <select id="vak" name="vak" title="vak?">
+                    <option value="Computernetwerken 2"> Computernetwerken 2</option>
+                    <option value="Web2"> Web2</option>
+                </select>
+                <br>
+                <br>
+                <label for="dag_week"> Dag van de week?</label>
+                <br>
+                <select id="dag_week" name="dag_week" title="Dag van de week?">
+                    <option value="maandag"> maandag 2</option>
+                    <option value="dinsdag"> dinsdag</option>
+                    <option value="woensdag"> woensdag</option>
+                    <option value="donderdag"> donderdag</option>
+                    <option value="vrijdag"> vrijdag </option>
+                    <option value="zaterdag"> zaterdag</option>
+                    <option value="zondag"> zondag</option>
+                </select>
+                <br>
+                <br>
+                <label for="uur">aantal uren?
+                    <br>
+                    <input id="uur" type="text" required name="uur"> </label>
+                <br>
+                <br>
+                <label for="submit">
+                    <input id="submit_studie" type="submit" value="Verzenden"> </label>
+                <!-- </fieldset> -->
+            </fieldset>
+        </form>
+    </main>
+</body>
+
+</html>

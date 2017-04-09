@@ -1,0 +1,8 @@
+.blokje{
+    padding: 1px;
+    display: inline-block;
+}
+p{
+	font-color:white;
+	font-size: 5px;
+}

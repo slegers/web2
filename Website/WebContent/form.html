@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+<meta charset="UTF-8">
+<title>Form</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/stylsheet.css">
+</head>
+
+<body>
+	<header class="header">
+		<nav class="mainMenu">
+			<ul>
+				<li><a href="index.jsp">Home</a></li>
+				<li><a href="overview.jsp">Overzicht</a></li>
+				<li><a href="#top" class="active">Add study</a></li>
+			</ul>
+		</nav>
+		<h1 id="top" class="headerTitle">Study tracker</h1>
+		<img class="banner" src="img/banner.jpg" alt="banner">
+	</header>
+	<main>
+	<h2>Add vak</h2>
+	<form method="POST" action="Add">
+		<fieldset>
+			<legend> Studie gegevens</legend>
+			<br> <label for="vak"> vak</label> <select id="vak" name="vak"
+				title="vak?">
+				<option value="Computernetwerken 2">Computernetwerken 2</option>
+				<option value="Web2">Web2</option>
+				<option value="Besturingssystemen">Besturingssystemen</option>
+				<option value="Bomen en grafen">Bomen en grafen</option>
+				<option value="Technieken van datamodellering">Technieken
+					van datamodellering</option>
+				<option value="BPM">BPM</option>
+				<option value="Communicatie">Communicatie</option>
+
+			</select> <br> <br> <label for="dag_week"> Dag van de week?</label>
+			<br> <select id="dag_week" name="dag_week"
+				title="Dag van de week?">
+				<option value="maandag">maandag</option>
+				<option value="dinsdag">dinsdag</option>
+				<option value="woensdag">woensdag</option>
+				<option value="donderdag">donderdag</option>
+				<option value="vrijdag">vrijdag</option>
+				<option value="zaterdag">zaterdag</option>
+				<option value="zondag">zondag</option>
+			</select> <br> <br>
+			<p>
+				<label for="uur"> uur </label> <input id="uur" type="number"
+					required placeholder="Aantal uren..." min=0 name="uur">
+			</p>
+			<br> <br>
+			<p>
+				<label for="submit_moment"> <input id="submit_moment" type="submit"
+					value="Verzenden">
+				</label>
+			</p>
+		</fieldset>
+	</form>
+	</main>
+</body>
+
+</html>
