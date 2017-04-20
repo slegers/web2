@@ -10,7 +10,7 @@ public class StudyTracker {
 	private static ArrayList<StudieMoment> studie = new ArrayList<>();
 	private static StudyTracker tracker = new StudyTracker();
 	
-	public static ArrayList<StudieMoment> getStudie(){
+	public ArrayList<StudieMoment> getStudie(){
 		return studie;
 	}
 	
@@ -21,13 +21,16 @@ public class StudyTracker {
 	public void addStdudyMoment(StudieMoment moment){
 		studie.add(moment);
 	}
-	public static StudyTracker getStudyMoment(){
-		return tracker;
+	public static synchronized StudyTracker getStudyMoment(){
+		if(tracker == null){
+			tracker = null;
+		}
+			return tracker;
 	}
-	public int getAantalUur() {
-		int uur = 0;
+	public double getAantalUur() {
+		double uur = 0;
 		for(StudieMoment s : studie){
-			uur += uur + s.getUur();
+			uur = uur + s.getUur();
 		}
 		return uur;
 	}

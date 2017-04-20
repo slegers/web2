@@ -1,4 +1,4 @@
-package ui.controller;
+package ui.cuontroller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -16,49 +16,60 @@ import domain.model.StudieMoment;
 @WebServlet("/Add")
 public class addMoment extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public addMoment() {
-        super();
-    }
+
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public addMoment() {
+		super();
+	}
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		if(request.getParameter("uur").equals("") || request.getParameter("uur") == null){
-			request.getRequestDispatcher("form.html").forward(request, response);
+		if("".equals(request.getParameter("uur")) || request.getParameter("uur") == null){
+			request.getRequestDispatcher("form.html").forward(request,response);
+		}else{
+			String dag = request.getParameter("dag_week");
+			String vak = request.getParameter("vak");
+			double uur = 0;
+			if(isDouble(request.getParameter("uur"))){
+				uur = Double.parseDouble(request.getParameter("uur"));
+				StudieMoment moment = new StudieMoment(uur,vak,dag);
+				StudyTracker.getStudyMoment().addStdudyMoment(moment);
+				request.setAttribute("aantalUur", StudyTracker.getStudyMoment().getAantalUur());
+				request.getRequestDispatcher("overview.jsp").forward(request, response);
+
+			}else{
+				request.getRequestDispatcher("form.html").forward(request, response);
+
+			}
+
 		}
-		String dag = request.getParameter("dag_week");
-		String vak = request.getParameter("vak");
-		int uur = 0;
-		if(request.getParameter("uur") != null){
-			 uur = Integer.parseInt(request.getParameter("uur"));
+	}
+	public boolean isDouble(String str) {
+		try {
+			Double.parseDouble(str);
+			return true;
+		} catch (NumberFormatException e) {
+			return false;
 		}
-		StudieMoment moment = new StudieMoment(uur,vak,dag);
-		StudyTracker.getStudyMoment().addStdudyMoment(moment);
-		request.getRequestDispatcher("overview.jsp").forward(request, response); 
 	}
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		if(!request.getParameter("uur").equals("") || !(request.getParameter("uur") == null)){
+		if("".equals(request.getParameter("uur")) || request.getParameter("uur") == null){
+			request.getRequestDispatcher("form.html").forward(request, response);
+		}else{
 			String dag = request.getParameter("dag_week");
 			String vak = request.getParameter("vak");
-			int uur = Integer.parseInt(request.getParameter("uur"));
+			double uur = Double.parseDouble(request.getParameter("uur"));
 			StudieMoment moment = new StudieMoment(uur,vak,dag);
 			StudyTracker.getStudyMoment().addStdudyMoment(moment);
 			request.setAttribute("aantalUur", StudyTracker.getStudyMoment().getAantalUur());
 			request.getRequestDispatcher("overview.jsp").forward(request, response);
-		}else{
-			request.getRequestDispatcher("form.html").forward(request, response);
-
-		}
-
-		
-		
+		}		
 	}	
 }

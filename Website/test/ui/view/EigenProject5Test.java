@@ -100,12 +100,12 @@ public class EigenProject5Test {
 
 		int teller = 0;
 		
-		for (int i = 0; i < StudyTracker.getStudie().size(); i++) {
-			assertEquals(StudyTracker.getStudie().get(i).getVak(), tableElements.get(teller).getText());
+		for (int i = 0; i < StudyTracker.getStudyMoment().getStudie().size(); i++) {
+			assertEquals(StudyTracker.getStudyMoment().getStudie().get(i).getVak(), tableElements.get(teller).getText());
 			teller++;
-			assertEquals(StudyTracker.getStudie().get(i).getDag(), tableElements.get(teller).getText().toLowerCase());
+			assertEquals(StudyTracker.getStudyMoment().getStudie().get(i).getDag(), tableElements.get(teller).getText().toLowerCase());
 			teller++;
-			assertEquals(StudyTracker.getStudie().get(i).getUur(), Integer.parseInt(tableElements.get(teller).getText()));
+			assertEquals(StudyTracker.getStudyMoment().getStudie().get(i).getUur(), Integer.parseInt(tableElements.get(teller).getText()));
 			teller++;
 		}
 

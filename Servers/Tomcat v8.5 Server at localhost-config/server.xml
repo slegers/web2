@@ -149,7 +149,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="clientServer" path="/clientserve" reloadable="true" source="org.eclipse.jst.jee.server:clientServer"/><Context docBase="servlet" path="/servlet" reloadable="true" source="org.eclipse.jst.jee.server:servlet"/><Context docBase="Servlet_to_jsp" path="/Servlet_to_jsp" reloadable="true" source="org.eclipse.jst.jee.server:Servlet_to_jsp"/><Context docBase="Vak_jsp" path="/Vak_jsp" reloadable="true" source="org.eclipse.jst.jee.server:Vak_jsp"/><Context docBase="Aantal_letters" path="/Aantal_letters" reloadable="true" source="org.eclipse.jst.jee.server:Aantal_letters"/></Host>
+      <Context docBase="clientServer" path="/clientserve" reloadable="true" source="org.eclipse.jst.jee.server:clientServer"/><Context docBase="servlet" path="/servlet" reloadable="true" source="org.eclipse.jst.jee.server:servlet"/><Context docBase="Servlet_to_jsp" path="/Servlet_to_jsp" reloadable="true" source="org.eclipse.jst.jee.server:Servlet_to_jsp"/><Context docBase="Vak_jsp" path="/Vak_jsp" reloadable="true" source="org.eclipse.jst.jee.server:Vak_jsp"/><Context docBase="Aantal_letters" path="/Aantal_letters" reloadable="true" source="org.eclipse.jst.jee.server:Aantal_letters"/><Context docBase="Website" path="/Website" reloadable="true" source="org.eclipse.jst.jee.server:Website"/></Host>
     </Engine>
   </Service>
 </Server>

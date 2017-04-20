@@ -2,20 +2,20 @@ package domain.model;
 
 public class StudieMoment{
 
-	private int uur;
+	private double uur;
 	private String vak;
 	private String dag;
 
 	
-	public StudieMoment( int uur,String vak,String dag){
+	public StudieMoment( double uur,String vak,String dag){
 		this.setUur(uur);
 		this.setVak(vak);
 		this.setDag(dag);
 	}
-	public int getUur() {
+	public double getUur() {
 		return uur;
 	}
-	public void setUur(int uur) {
+	public void setUur(double uur) {
 		this.uur = uur;
 	}
 	public String getVak() {

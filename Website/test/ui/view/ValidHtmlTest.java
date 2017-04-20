@@ -31,7 +31,7 @@ public class ValidHtmlTest {
 		driver.get("https://validator.w3.org/#validate_by_uri+with_options");
 		WebElement invulveld = driver.findElement(By.id("uri"));
 		// verander naamVanJeEigenSite naar de juiste naam
-		invulveld.sendKeys("http://java.cyclone2.khleuven.be:38034/..../");
+		invulveld.sendKeys("http://java.cyclone2.khleuven.be:38034/r0456491_website/");
 
 		Select dropdown = new Select(driver.findElement(By.id("uri-doctype")));
 		dropdown.selectByValue("HTML5");
